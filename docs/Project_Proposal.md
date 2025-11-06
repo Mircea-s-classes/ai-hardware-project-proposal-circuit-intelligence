@@ -12,9 +12,9 @@
 
 ## 1. Project Title
 Name of the Team
-
+Circuit Inteligence
 List of students in the team
-
+Yasir Babiker and Fares Elsherbiny
 Provide a clear and concise title for your project. 
 
 ## 2. Platform Selection
