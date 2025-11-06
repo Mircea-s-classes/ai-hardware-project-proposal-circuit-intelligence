@@ -41,8 +41,20 @@ This project focuses on running gesture detection locally on an Arduino-based pl
 
 5. Scalability: Support at least 3 distinct hand gestures (e.g., turn on, turn off, change color) with potential to expand to more gestures in future versions.
 ## 5. Methodology
-Describe your planned approach: hardware setup, software tools, model design, performance metrics, and validation strategy.
+Hardware Setup:
+The system uses an Arduino board to control LEDs and a camera or gesture sensor to detect hand movements. The Arduino handles real-time LED control, while the sensor captures and interprets gestures. Components include LEDs, resistors, power supply, and connecting wires.
 
+Software Tools:
+The project uses the Arduino IDE for programming, Python with TensorFlow Lite for training and optimizing a lightweight gesture recognition model, and OpenCV for image preprocessing.
+
+Model Design:
+A small convolutional neural network (CNN) is trained to recognize a few hand gestures (e.g., on, off, change color). The model is quantized and deployed on the hardware for fast, low-power inference.
+
+Performance Metrics:
+Key targets include ≥90% accuracy, ≤0.5 s response time, ≤5 W power use, and support for at least 3 gestures.
+
+Validation Strategy:
+Testing will measure accuracy, latency, and power consumption under different lighting and user conditions. The system will run for at least 2 hours continuously to verify reliability and real-time performance.
 ## 6. Expected Deliverables
 List tangible outputs: working demo, GitHub repository, documentation, presentation slides, and final report.
 
