@@ -27,8 +27,9 @@ Justification:
 The Arduino platform is chosen because it provides an easy and efficient way to control LEDs and interface with sensors for hand gesture detection. Its low latency and real-time processing make it ideal for responsive hardware control. Arduino’s open-source libraries, affordability, and strong community support also make it perfect for building a simple yet effective hand gesture-controlled LED system.
 
 ## 3. Problem Definition
-Describe the AI or hardware design problem you aim to address and its relevance to AI hardware (e.g., efficiency, latency, scalability).
+The main problem this project addresses is creating an efficient and responsive system that can recognize hand gestures and control LEDs in real time using low-power embedded hardware. Traditional gesture recognition systems often rely on high-performance computers or cloud processing, which increases latency and power consumption.
 
+This project focuses on running gesture detection locally on an Arduino-based platform, minimizing delay between gesture input and LED response. The relevance to AI hardware lies in optimizing limited computational resources to achieve real-time interaction — improving efficiency, reducing latency, and demonstrating how AI concepts can be implemented on small, scalable embedded systems.
 ## 4. Technical Objectives
 List 3–5 measurable objectives with quantitative targets when possible.
 
