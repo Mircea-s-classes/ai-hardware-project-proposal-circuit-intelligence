@@ -85,7 +85,7 @@ Both team members share equal leadership and responsibility. They will each writ
 | **Week 2 – Nov. 5, 2025** | **Project Proposal** | PDF submission outlining problem, objectives, and design plan; GitHub repository initialized. |
 | **Week 4 – Nov. 19, 2025** | **Midterm Presentation** | Presentation slides and preliminary results showing gesture detection controlling LEDs. |
 | **Week 6 – Early Dec. 2025** | **Integration & Testing** | Fully working prototype tested on Arduino with both versions of code compared and merged. |
-| **Final – Dec. 18, 2025** | **Final Presentation & Report** | Final report, live demo, and GitHub archive of completed system. |
+| **Final – Dec. 17, 2025** | **Final Presentation & Report** | Final report, live demo, and GitHub archive of completed system. |
 
 **Collaboration Plan:**  
 Fares and Yasir will work in parallel during each phase. Both will code, test, and evaluate independently, then combine their work for integration and testing. They will meet regularly to review progress, refine system performance, and prepare joint deliverables for each milestone.
