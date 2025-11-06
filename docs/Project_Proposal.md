@@ -20,10 +20,11 @@ Yasir Babiker and Fares Elsherbiny
 Provide a clear and concise title for your project. 
 Smart LED Control Using Real-Time Hand Detection
 ## 2. Platform Selection
-Select one platform category and justify your choice.
+Embedded System Platform – Arduino
 
-**Undergraduates:** Edge-AI, TinyML, or Neuromorphic platforms  
-**Graduates:** open-source AI accelerators (Ztachip, VTA, Gemmini, VeriGOOD-ML, NVDLA) or any of the above 
+Justification:
+
+The Arduino platform is chosen because it provides an easy and efficient way to control LEDs and interface with sensors for hand gesture detection. Its low latency and real-time processing make it ideal for responsive hardware control. Arduino’s open-source libraries, affordability, and strong community support also make it perfect for building a simple yet effective hand gesture-controlled LED system.
 
 ## 3. Problem Definition
 Describe the AI or hardware design problem you aim to address and its relevance to AI hardware (e.g., efficiency, latency, scalability).
