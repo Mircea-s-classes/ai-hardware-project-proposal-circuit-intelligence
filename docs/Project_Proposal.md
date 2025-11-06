@@ -66,25 +66,29 @@ Presentation Slides: Summarize project goals, design approach, performance resul
 
 Final Report: Detailed written report covering problem statement, methodology, testing results, and conclusions.
 
-## 7. Team Responsibilities
-List each member’s main role.
+## 7. Team Responsibilities  
 
 | Name | Role | Responsibilities |
 |------|------|------------------|
-| [Student A] | Team Lead | Coordination, documentation |
-| [Student B] | Hardware | Setup, integration |
-| [Student C] | Software | Model training, inference |
-| [Student D] | Evaluation | Testing, benchmarking |
+| **Fares Elsherbiny** | **Co-Leader / Hardware & Software Engineer** | Collaborates on code development for hand detection and LED control, integrates the system with Arduino hardware, and assists with documentation. |
+| **Yasir [Last Name]** | **Co-Leader / Hardware & Software Engineer** | Works jointly on coding and algorithm optimization, compares and refines both versions of the code with Fares, and helps test and troubleshoot the Arduino setup. |
 
-## 8. Timeline and Milestones
-Provide expected milestones:
+**Collaboration Plan:**  
+Both team members share equal leadership and responsibility. They will each write and test their own versions of the code for gesture detection and LED control. After comparing results, they will merge the best-performing features and test the final integrated system together on the Arduino hardware. Both will jointly handle debugging, performance evaluation, and final documentation.
 
-| Week | Milestone | Deliverable |
-|------|------------|-------------|
-| 2 | Proposal | PDF + GitHub submission |
-| 4 | Midterm presentation | Slides, preliminary results |
-| 6 | Integration & testing | Working prototype |
-| Dec. 18 | Final presentation | Report, demo, GitHub archive |
+---
+
+## 8. Timeline and Milestones  
+
+| Week / Date | Milestone | Deliverable |
+|--------------|------------|-------------|
+| **Week 2 – Nov. 5, 2025** | **Project Proposal** | PDF submission outlining problem, objectives, and design plan; GitHub repository initialized. |
+| **Week 4 – Nov. 19, 2025** | **Midterm Presentation** | Presentation slides and preliminary results showing gesture detection controlling LEDs. |
+| **Week 6 – Early Dec. 2025** | **Integration & Testing** | Fully working prototype tested on Arduino with both versions of code compared and merged. |
+| **Final – Dec. 18, 2025** | **Final Presentation & Report** | Final report, live demo, and GitHub archive of completed system. |
+
+**Collaboration Plan:**  
+Fares and Yasir will work in parallel during each phase. Both will code, test, and evaluate independently, then combine their work for integration and testing. They will meet regularly to review progress, refine system performance, and prepare joint deliverables for each milestone.
 
 ## 9. Resources Required
 List special hardware, datasets, or compute access needed.
