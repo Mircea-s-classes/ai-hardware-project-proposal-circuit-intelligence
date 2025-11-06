@@ -56,7 +56,15 @@ Key targets include ≥90% accuracy, ≤0.5 s response time, ≤5 W power use, a
 Validation Strategy:
 Testing will measure accuracy, latency, and power consumption under different lighting and user conditions. The system will run for at least 2 hours continuously to verify reliability and real-time performance.
 ## 6. Expected Deliverables
-List tangible outputs: working demo, GitHub repository, documentation, presentation slides, and final report.
+Working Demo: A functional hand gesture-controlled LED system running on the Arduino platform.
+
+GitHub Repository: Contains all source code, trained model files, wiring diagrams, and setup instructions.
+
+Documentation: Step-by-step guide explaining hardware connections, software setup, and model deployment.
+
+Presentation Slides: Summarize project goals, design approach, performance results, and future improvements.
+
+Final Report: Detailed written report covering problem statement, methodology, testing results, and conclusions.
 
 ## 7. Team Responsibilities
 List each member’s main role.
