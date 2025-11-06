@@ -71,7 +71,7 @@ Final Report: Detailed written report covering problem statement, methodology, t
 | Name | Role | Responsibilities |
 |------|------|------------------|
 | **Fares Elsherbiny** | **Co-Leader / Hardware & Software Engineer** | Collaborates on code development for hand detection and LED control, integrates the system with Arduino hardware, and assists with documentation. |
-| **Yasir [Last Name]** | **Co-Leader / Hardware & Software Engineer** | Works jointly on coding and algorithm optimization, compares and refines both versions of the code with Fares, and helps test and troubleshoot the Arduino setup. |
+| **Yasir Babiker** | **Co-Leader / Hardware & Software Engineer** | Works jointly on coding and algorithm optimization, compares and refines both versions of the code with Fares, and helps test and troubleshoot the Arduino setup. |
 
 **Collaboration Plan:**  
 Both team members share equal leadership and responsibility. They will each write and test their own versions of the code for gesture detection and LED control. After comparing results, they will merge the best-performing features and test the final integrated system together on the Arduino hardware. Both will jointly handle debugging, performance evaluation, and final documentation.
