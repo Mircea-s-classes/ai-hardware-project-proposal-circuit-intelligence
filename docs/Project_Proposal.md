@@ -31,8 +31,15 @@ The main problem this project addresses is creating an efficient and responsive 
 
 This project focuses on running gesture detection locally on an Arduino-based platform, minimizing delay between gesture input and LED response. The relevance to AI hardware lies in optimizing limited computational resources to achieve real-time interaction — improving efficiency, reducing latency, and demonstrating how AI concepts can be implemented on small, scalable embedded systems.
 ## 4. Technical Objectives
-List 3–5 measurable objectives with quantitative targets when possible.
+1. Gesture Detection Accuracy: Achieve at least 90% accuracy in recognizing hand gestures used to control the LEDs.
 
+2. Response Time: Ensure the system responds to a recognized gesture within 0.5 seconds of detection.
+
+3. Power Efficiency: Maintain total system power consumption below 5 watts during operation.
+
+4. System Reliability: Operate continuously for at least 2 hours without errors or incorrect LED responses.
+
+5. Scalability: Support at least 3 distinct hand gestures (e.g., turn on, turn off, change color) with potential to expand to more gestures in future versions.
 ## 5. Methodology
 Describe your planned approach: hardware setup, software tools, model design, performance metrics, and validation strategy.
 
