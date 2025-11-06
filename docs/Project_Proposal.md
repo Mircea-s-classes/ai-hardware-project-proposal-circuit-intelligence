@@ -18,7 +18,7 @@ List of students in the team
 Yasir Babiker and Fares Elsherbiny
 
 Provide a clear and concise title for your project. 
-
+Smart LED Control Using Real-Time Hand Detection
 ## 2. Platform Selection
 Select one platform category and justify your choice.
 
