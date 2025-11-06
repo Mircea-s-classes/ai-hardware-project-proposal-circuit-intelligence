@@ -91,7 +91,10 @@ Both team members share equal leadership and responsibility. They will each writ
 Fares and Yasir will work in parallel during each phase. Both will code, test, and evaluate independently, then combine their work for integration and testing. They will meet regularly to review progress, refine system performance, and prepare joint deliverables for each milestone.
 
 ## 9. Resources Required
-List special hardware, datasets, or compute access needed.
+Hardware Components: Arduino board, camera or gesture sensor, LEDs, resistors, jumper wires, and power supply.
 
+Dataset: A custom hand gesture image dataset collected using the camera module, including multiple gestures under varied lighting conditions.
+
+Compute Access: A standard laptop or desktop with Python and TensorFlow installed for training and converting the model to TensorFlow Lite format.
 ## 10. References
 Include relevant papers, repositories, and documentation.
