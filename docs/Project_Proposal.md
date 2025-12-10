@@ -108,9 +108,8 @@ Both members work in parallel for coding and testing. Weekly check-ins ensure th
 ---
 
 ## 10. References
-1. TensorFlow Lite Micro Documentation  
-2. MediaPipe Hands Documentation  
-3. Arduino IDE Official Documentation  
-4. OpenCV Image Processing Tutorials  
-5. Example TFLite gesture recognition repos on GitHub  
+1. MediaPipe Hands Documentation  
+2. Arduino IDE Official Documentation  
+3. OpenCV Image Processing Tutorials  
+4. Example TFLite gesture recognition repos on GitHub  
 
