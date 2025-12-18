@@ -1,115 +1,120 @@
-# University of Virginia
-## Department of Electrical and Computer Engineering
+# Circuit Intelligence
+## Smart LED Control Using Real Time Hand Detection
 
-**Course:** ECE 4332 / ECE 6332 — AI Hardware Design and Implementation  
-**Semester:** Fall 2025  
+University of Virginia  
+Department of Electrical and Computer Engineering  
+Course: ECE 4332 / ECE 6332 AI Hardware Design and Implementation  
+Semester: Fall 2025  
 
+Team Members  
+Fares Elsherbiny  
+Yasir Babiker  
 
----
+## Project Summary
+This project builds a fast and reliable system where simple hand gestures control LED behavior in real time. The goal is to combine lightweight AI based gesture recognition with embedded hardware control to achieve low latency interaction while keeping cost and power low. The system detects a hand using a camera, converts the gesture into a compact representation, sends it to an Arduino through serial communication, and the Arduino updates LEDs instantly.
 
-# AI Hardware Project Proposal
+## Motivation
+Hand gestures are natural and intuitive, but many gesture systems rely on heavy computers or cloud processing, which increases cost, power use, and latency. Our goal is to show that smart interaction does not require big hardware. This matters for real time control, IoT devices, and small robots where every millisecond and every watt counts.
 
-## 1. Project Title
-**Team Name:** Circuit Intelligence  
-**Students:** Yasir Babiker and Fares Elsherbiny  
+## Platform Selection
+Embedded System Platform: Arduino  
 
-**Project Title:** Smart LED Control Using Real-Time Hand Detection
+Justification  
+Arduino provides fast and reliable GPIO control for LEDs with low power usage and low latency. It has a straightforward development workflow and strong library support, which lets us focus on the AI hardware system design and integration.
 
----
+## Team Responsibilities
+Fares Elsherbiny  
+Co Leader Hardware and Software  
+Responsibilities include hardware integration, LED control logic, serial communication testing, and documentation.
 
-## 2. Platform Selection
-**Embedded System Platform – Arduino**
+Yasir Babiker  
+Co Leader Algorithm and Software  
+Responsibilities include gesture detection logic, model or rule based design, image processing, testing, and helping refine the final system.
 
-**Justification:**  
-Arduino gives us a simple and reliable way to control LEDs while staying fast enough for real-time gesture response. It does not need heavy compute or cloud processing and fits the goal of keeping the system small, low-power, and responsive. It is affordable, well supported, and easy to integrate with sensors, which lets us focus more on model design and hardware interaction.
+Collaboration Plan  
+Both members work across the full workflow including coding, testing, model design, hardware setup, debugging, and documentation. We compare approaches and merge the best features into one unified system.
 
----
+## System Architecture
+Pipeline  
+Gesture Input from laptop camera  
+Preprocessing and gesture inference on laptop  
+Serial communication from laptop to Arduino over USB  
+Arduino hardware control  
+LED output actions  
 
-## 3. Problem Definition
-We want a system that recognizes hand gestures and controls LEDs on the spot without relying on a full computer. Most gesture systems use GPUs or stronger CPUs which create delay and increase power use. Our goal is to push gesture detection onto smaller hardware while still reacting smoothly in real time.
+Current Midterm Status  
+Gesture Input: Laptop camera  
+Processing and inference: Laptop  
+Communication: Laptop to Arduino  
+Hardware control: Arduino  
+Output: LED actions  
+Continuous loop and reliability testing
 
-This connects directly to AI hardware design since we work with limited compute and memory and still try to deliver quick inference, low latency, and reliable behavior on a lightweight embedded platform.
+## Technical Objectives
+Gesture Accuracy at least 90 percent  
+Response Time at most 0.5 seconds  
+Power Consumption at most 5 watts  
+Reliability at least 2 hours continuous run  
+Support at least 3 gestures such as on, off, and change
 
----
+## Results
+Midterm results in controlled lighting and short range testing  
+Gesture accuracy about 90 percent  
+Response time under 0.5 seconds and visually instant  
+Stable continuous loop without freezing during testing  
+Multiple gestures supported through finger state patterns
 
-## 4. Technical Objectives
-1. Reach **90% or higher gesture recognition accuracy**.  
-2. Keep response time **under 0.5 seconds**.  
-3. Stay **under 5 watts** during operation.  
-4. Run **at least 2 hours** with stable performance.  
-5. Support **three or more gestures**, such as on, off, and color change.
+## Limitations
+Gesture detection currently runs on the laptop rather than fully on device  
+Performance can depend on lighting conditions  
+Gesture set is limited at the current stage
 
----
+## Future Work
+Move inference fully on device using a microcontroller friendly model  
+Quantize and optimize the model to reduce latency and memory  
+Expand gesture set and map gestures to richer outputs such as colors, brightness, or patterns  
+Improve robustness across lighting, distance, and different users  
+Measure power more formally and optimize system level efficiency
 
-## 5. Methodology
+## HowTo Run the System
 
-### Hardware Setup
-We use an Arduino board to drive LED outputs while a camera collects hand images. The camera captures the gesture, the model interprets it, and the Arduino responds by changing the LED state. Components include LEDs, resistors, wires, and a power source.
+### Requirements
+Hardware  
+Arduino board  
+LEDs and resistors  
+Breadboard and wires  
+USB cable  
 
-### Software Tools
-We use Python, TensorFlow Lite, and OpenCV to train and prepare a lightweight gesture model. The Arduino IDE is used to deploy the LED control logic and integrate the gesture output.
+Software  
+Arduino IDE  
+Python 3  
+OpenCV  
+MediaPipe  
+PySerial  
 
-### Model Design
-A small CNN is trained on a custom gesture dataset. After training, the model is quantized to run efficiently on low-power hardware. The goal is to keep inference fast and accurate while fitting the constraints of the system.
+### Wiring
+Connect LEDs to Arduino digital pins 8 through 12 with the correct series resistors. Connect grounds properly. Use the same pin mapping used in the Arduino sketch.
 
-### Performance Metrics
-We evaluate:  
-- Accuracy (goal ≥ 90%)  
-- Reaction time (goal ≤ 0.5 seconds)  
-- Power usage (goal ≤ 5W)  
-- Stability over long operation  
-- Support for multiple gestures  
+### Step by Step
+1. Build the LED circuit on a breadboard and connect LEDs to Arduino pins 8 to 12.
+2. Upload the Arduino LED control sketch to the board using the Arduino IDE.
+3. Install Python dependencies and confirm the correct serial port for the Arduino.
+4. Run the Python camera and gesture script on the laptop.
+5. Show hand gestures in front of the camera.
+6. The script sends finger states to the Arduino and the Arduino updates LEDs in real time.
 
-### Validation Strategy
-We test gestures in different lighting conditions and distances. We measure accuracy, latency, and power consumption. A continuous two-hour test checks reliability and consistency.
+### What You Should See
+The laptop detects the hand and creates a five value finger state list. The Arduino receives those values and turns LEDs on or off based on the gesture input.
 
----
+## Repository Structure
+Recommend folders  
+src for Python code  
+arduino for Arduino sketch  
+models for trained model files if used  
+docs for images, wiring diagrams, and presentation material
 
-## 6. Expected Deliverables
-- A working demo where LEDs respond to hand gestures in real time.  
-- A GitHub repository with all code, model files, and wiring diagrams.  
-- Documentation explaining setup and deployment instructions.  
-- Presentation slides covering results and system design.  
-- A final written report with testing, findings, and conclusions.
-
----
-
-## 7. Team Responsibilities
-
-| Name | Role | Responsibilities |
-|------|------|------------------|
-| **Fares Elsherbiny** | Co-Leader / Hardware & Software | Builds and tests the LED control logic, handles hardware integration, writes gesture interface code, and supports documentation. |
-| **Yasir Babiker** | Co-Leader / Algorithm & Software | Trains and optimizes the gesture model, works on image processing and detection logic, tests both versions of the code, and helps refine the final system. |
-
-**Collaboration Plan:**  
-Both members write their own code versions, compare results, and merge the strongest features into one unified system. Work is done in parallel with regular check-ins for testing, debugging, and preparing deliverables.
-
----
-
-## 8. Timeline and Milestones
-
-| Week / Date | Milestone | Deliverable |
-|--------------|------------|-------------|
-| **Week 2 – Nov. 5** | Project Proposal | Proposal PDF and GitHub repository setup. |
-| **Week 4 – Nov. 19** | Midterm Presentation | Slides and first working demo of gesture-controlled LEDs. |
-| **Week 6 – Early Dec.** | Integration & Testing | Full prototype tested and both code versions merged. |
-| **Final – Dec. 17** | Final Presentation & Report | Live demo, final report, and full GitHub archive. |
-
-**Collaboration Plan:**  
-Both members work in parallel for coding and testing. Weekly check-ins ensure the model, hardware logic, and integration stay on track. Final merging and testing are done together.
-
----
-
-## 9. Resources Required
-**Hardware:** Arduino board, camera or gesture sensor, LEDs, resistors, wires, and a power supply.  
-**Dataset:** Custom gesture images collected through the camera under different lighting conditions.  
-**Compute:** A laptop or desktop running Python, OpenCV, and TensorFlow for training and converting the model.
-
----
-
-## 10. References
-1. MediaPipe Hands Documentation  
-2. Arduino IDE Official Documentation  
-3. OpenCV Image Processing Tutorials  
-4. Example TFLite gesture recognition repos on GitHub  
-
+## References
+MediaPipe Hands Documentation  
+Arduino IDE Documentation  
+OpenCV Tutorials  
+TensorFlow Lite resources and example gesture recognition repos
