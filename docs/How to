@@ -1,4 +1,4 @@
-Code in Arduino:
+## Code in Arduino:
 int ledPins[] = {8, 9, 10, 11, 12};  // Thumb, Index, Middle, Ring, Pinky
 
 void setup() {
@@ -16,7 +16,7 @@ void loop() {
         }
     }
 }
-Code in VS Code:
+## Code in VS Code:
 import cv2
 import mediapipe as mp
 import serial
