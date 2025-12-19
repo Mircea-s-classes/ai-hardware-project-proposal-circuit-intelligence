@@ -1,1 +1,115 @@
+## HowTo: Using the Software with the Hardware (Hand Gesture LED Control)
+
+This section explains how to set up the hardware and run the software so that hand gestures detected by a camera control LEDs connected to an Arduino.
+
+---
+
+### Hardware Requirements
+
+* Arduino Nano / Uno (any board with USB serial support)
+* 5 LEDs
+* 5 current-limiting resistors (220Ω–330Ω)
+* Breadboard and jumper wires
+* USB cable
+* PC with a webcam
+
+---
+
+### Hardware Setup
+
+1. Connect each LED **in series with a resistor**.
+2. Connect the LED pins to the Arduino as follows:
+
+| Finger | Arduino Pin |
+| ------ | ----------- |
+| Thumb  | D8          |
+| Index  | D9          |
+| Middle | D10         |
+| Ring   | D11         |
+| Pinky  | D12         |
+
+3. Connect all LED cathodes (short legs) to **GND**.
+4. Power the Arduino using the USB cable.
+
+> ⚠️ Do not power the circuit externally while connected via USB.
+
+---
+
+### Firmware Installation (Arduino)
+
+1. Open the Arduino IDE.
+2. Paste the provided Arduino code into a new sketch.
+3. Select:
+
+   * **Board:** Your Arduino model
+   * **Port:** Correct COM port
+4. Upload the code to the Arduino.
+5. Leave the Arduino connected to the computer.
+
+The Arduino listens for **5 bytes over Serial**, each representing a finger (1 = LED ON, 0 = LED OFF).
+
+---
+
+### Software Setup (PC / VS Code)
+
+1. Install required Python packages:
+
+```bash
+pip install opencv-python mediapipe pyserial
+```
+
+2. Open the Python script in VS Code.
+3. Update the serial port if needed:
+
+```python
+arduino = serial.Serial(port='COM3', baudrate=9600, timeout=1)
+```
+
+(Replace `COM3` with your system’s port.)
+
+4. Ensure a webcam is connected.
+
+---
+
+### Running the Full System
+
+1. Plug in the Arduino and confirm the firmware is uploaded.
+2. Run the Python script:
+
+```bash
+python python.py
+```
+
+3. A webcam window will open showing hand tracking.
+4. Raise or lower fingers in front of the camera.
+5. Each detected finger turns its corresponding LED **ON or OFF** in real time.
+
+| Gesture     | LED Response |
+| ----------- | ------------ |
+| Finger up   | LED ON       |
+| Finger down | LED OFF      |
+
+---
+
+### How the System Works
+
+1. **MediaPipe** detects hand landmarks from the webcam feed.
+2. Each finger is classified as **up (1)** or **down (0)**.
+3. A list of 5 values is sent to the Arduino via Serial.
+4. The Arduino sets each LED state accordingly.
+
+---
+
+### Stopping the Program
+
+* Press **ESC** to close the webcam window.
+* The serial connection will close automatically.
+
+---
+
+If you want, I can next:
+
+* Tighten this to be more **grading-optimized**
+* Add a **System Diagram explanation**
+* Help you write a short **Results & Performance** section
 
