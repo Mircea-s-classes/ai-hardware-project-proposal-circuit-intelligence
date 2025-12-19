@@ -17,7 +17,7 @@ This section explains how to set up the hardware and run the software so that ha
 
 ### Hardware Setup
 
-1. Connect each LED **in series with a resistor**.
+1. Connect each LED to the + terminal.
 2. Connect the LED pins to the Arduino as follows:
 
 | Finger | Arduino Pin |
@@ -28,10 +28,8 @@ This section explains how to set up the hardware and run the software so that ha
 | Ring   | D11         |
 | Pinky  | D12         |
 
-3. Connect all LED cathodes (short legs) to **GND**.
-4. Power the Arduino using the USB cable.
+3. Power the Arduino using the USB cable.
 
-> ⚠️ Do not power the circuit externally while connected via USB.
 
 ---
 
@@ -41,8 +39,8 @@ This section explains how to set up the hardware and run the software so that ha
 2. Paste the provided Arduino code into a new sketch.
 3. Select:
 
-   * **Board:** Your Arduino model
-   * **Port:** Correct COM port
+   * **Board:** Your Arduino model (Arduino Nano 33 BLE)
+   * **Port:** Correct COM port (COM3)
 4. Upload the code to the Arduino.
 5. Leave the Arduino connected to the computer.
 
@@ -65,7 +63,6 @@ pip install opencv-python mediapipe pyserial
 arduino = serial.Serial(port='COM3', baudrate=9600, timeout=1)
 ```
 
-(Replace `COM3` with your system’s port.)
 
 4. Ensure a webcam is connected.
 
@@ -86,8 +83,8 @@ python python.py
 
 | Gesture     | LED Response |
 | ----------- | ------------ |
-| Finger up   | LED ON       |
-| Finger down | LED OFF      |
+| Finger up   | LED OFF       |
+| Finger down | LED ON      |
 
 ---
 
@@ -105,11 +102,4 @@ python python.py
 * Press **ESC** to close the webcam window.
 * The serial connection will close automatically.
 
----
-
-If you want, I can next:
-
-* Tighten this to be more **grading-optimized**
-* Add a **System Diagram explanation**
-* Help you write a short **Results & Performance** section
 
